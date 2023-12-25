@@ -1,6 +1,6 @@
 {
-  "name": "Ayoub Token Test",
-  "symbol": "ATT",
-  "description": "Just a test for how to name a token",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Adorable-animal-cat-20787.jpg"
+  "name": "{TOKEN_NAME}",
+  "symbol": "{TOKEN_SYMBOL}",
+  "description": "{TOKEN_DESCRIPTION}",
+  "image": "{TOKEN_LOGO}"
 }

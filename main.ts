@@ -37,22 +37,18 @@ const INITIALIZE = true;
 
 async function main() {
   const myKeypair = loadWalletKey("wallet/keypair1.json");
-  const mint = new web3.PublicKey(
-    "59MmTawkM7UTLkAZmvWFJdbHEPaAtLc8Z5inrpSJD2Zv"
-  );
+  const mint = new web3.PublicKey("{TOKEN_ADDRESS}");
 
-  const umi = createUmi(
-    "https://nd-121-507-246.p2pify.com/71411e654edeee49fba3b1ccf763c7b4"
-  );
+  const umi = createUmi("{NETWORK_URL}");
   const signer = createSignerFromKeypair(umi, fromWeb3JsKeypair(myKeypair));
   umi.use(signerIdentity(signer, true));
 
   const ourMetadata = {
     // Values to change
-    name: "Ayoub Token Test",
-    symbol: "ATT",
+    name: "{TOKEN_NAME}",
+    symbol: "{TOKEN_SYMBOL}",
     // Has to be online metadata
-    uri: "./metadata.json",
+    uri: "{METADATA_URL}",
   };
   const onChainData = {
     ...ourMetadata,
